@@ -1,0 +1,93 @@
+Configuration Client_Server = {
+	Component Client = {
+		ProvidedPort Send_Request;
+		RequiredPort System_Client;
+	}
+
+	Component Server = {
+		Configuration Server_Detail = {
+			Component Connection_Manager = {
+				ProvidedPort Security_Check_Send;
+				ProvidedPort DB_Query_Send;
+				RequiredPort Security_Check_Receive;
+				RequiredPort DB_Query_Receive;
+				RequiredPort External_Socket_Receive;
+			}
+			Component Security_Manager = {
+				ProvidedPort Security_Authentification_Send;
+				ProvidedPort Check_Query_Send;
+				RequiredPort Security_Authentification_Receive;
+				RequiredPort Check_Query_Receive;
+			}
+			Component Database = {
+				ProvidedPort Security_Management_Send;
+				ProvidedPort Query_Interrogation_Send;
+				RequiredPort Security_Management_Receive;
+				RequiredPort Query_Interrogation_Receive;
+			}
+			Connector CM_SM = {
+				RequiredRole Caller_CM_SM;
+				ProvidedRole Called_CM_SM;
+			}
+			Connector SM_DB = {
+				RequiredRole Caller_SM_DB;
+				ProvidedRole Called_SM_DB;
+			}
+			Connector DB_CM = {
+				RequiredRole Caller_DB_CM;
+				ProvidedRole Called_DB_CM;
+			}
+			Attachment CM_To_CM_SM = {
+				ProvidedPort: Connection_Manager.Security_Check_Send to RequiredRole: CM_SM.Caller_CM_SM;
+				RequiredPort: Connection_Manager.Security_Check_Receive to ProvidedRole: CM_SM.Called_CM_SM;
+			}
+			Attachment CM_SM_To_SM = {
+				ProvidedPort: Security_Manager.Security_Authentification_Send to RequiredRole: CM_SM.Caller_CM_SM;
+				RequiredPort: Security_Manager.Security_Authentification_Receive to ProvidedRole: CM_SM.Called_CM_SM;
+			}
+			Attachment SM_To_SM_DB = {
+				ProvidedPort: Security_Manager.Check_Query_Send to RequiredRole: SM_DB.Caller_SM_DB;
+				RequiredPort: Security_Manager.Check_Query_Receive to ProvidedRole: SM_DB.Called_SM_DB;
+			}
+			Attachment SM_DB_To_DB = {
+				ProvidedPort: Database.Security_Management_Send to RequiredRole: SM_DB.Caller_SM_DB;
+				RequiredPort: Database.Security_Management_Receive to ProvidedRole: SM_DB.Called_SM_DB;
+			}
+			Attachment DB_to_DB_CM = {
+				ProvidedPort: Database.Query_Interrogation_Send to RequiredRole: DB_CM.Caller_DB_CM;
+				RequiredPort: Database.Query_Interrogation_Receive to ProvidedRole: DB_CM.Called_DB_CM;
+			}
+			Attachment DB_CM_To_CM = {
+				ProvidedPort: Connection_Manager.DB_Query_Send to RequiredRole: DB_CM.Caller_DB_CM;
+				RequiredPort: Connection_Manager.DB_Query_Receive to ProvidedRole: DB_CM.Called_DB_CM;
+			}
+			Binding CM_Server = {
+
+				RequiredPort: Connection_Manager.External_Socket_Receive to ProvidedPort: Server_Detail.System_Server_Binding_Send;
+			}
+
+		}
+		RequiredPort Receive_Request;
+		RequiredPort System_Server;
+		ProvidedPort System_Server_Binding_Send;
+	}
+
+	Connector RPC = {
+		RequiredRole Caller;
+		ProvidedRole Called;
+	}
+	Attachment Client_To_RPC = {
+		ProvidedPort: Client.Send_Request to RequiredRole: RPC.Caller;
+	}
+	Attachment RPC_To_Server = {
+		RequiredPort: Server.Receive_Request to ProvidedRole: RPC.Called;
+	}
+	Binding Server_System = {
+		ProvidedPort: Client_Server.Server_Port to RequiredPort: Server.System_Server;
+	}
+	Binding Client_System = {
+		ProvidedPort: Client_Server.Client_Port to RequiredPort: Client.System_Client;
+	}
+	ProvidedPort Server_Port;
+	ProvidedPort Client_Port;
+}

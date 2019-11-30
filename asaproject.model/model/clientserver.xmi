@@ -17,6 +17,9 @@
       <icomponents
           xsi:type="M2:ProvidedPort"
           name="Send_Request"/>
+      <icomponents
+          xsi:type="M2:RequiredPort"
+          name="System_Client"/>
     </elements>
     <elements
         xsi:type="M2:Component"
@@ -28,115 +31,139 @@
           components="//@architecturalElements.0/@elements.1/@elements.0/@elements.0">
         <elements
             xsi:type="M2:Component"
-            name="ConnectionManager"
+            name="Connection_Manager"
             configuration="//@architecturalElements.0/@elements.1/@elements.0">
           <icomponents
               xsi:type="M2:ProvidedPort"
-              name="External_Socket"/>
+              name="Security_Check_Send"/>
           <icomponents
               xsi:type="M2:ProvidedPort"
-              name="Security_Check"/>
+              name="DB_Query_Send"/>
           <icomponents
-              xsi:type="M2:ProvidedPort"
-              name="DB_Query"/>
+              xsi:type="M2:RequiredPort"
+              name="Security_Check_Receive"/>
+          <icomponents
+              xsi:type="M2:RequiredPort"
+              name="DB_Query_Receive"/>
+          <icomponents
+              xsi:type="M2:RequiredPort"
+              name="External_Socket_Receive"/>
         </elements>
         <elements
             xsi:type="M2:Component"
             name="Security_Manager">
           <icomponents
               xsi:type="M2:ProvidedPort"
-              name="Security_Autentification"/>
+              name="Security_Authentification_Send"/>
           <icomponents
               xsi:type="M2:ProvidedPort"
-              name="Check_Query"/>
+              name="Check_Query_Send"/>
+          <icomponents
+              xsi:type="M2:RequiredPort"
+              name="Security_Authentification_Receive"/>
+          <icomponents
+              xsi:type="M2:RequiredPort"
+              name="Check_Query_Receive"/>
         </elements>
         <elements
             xsi:type="M2:Component"
             name="Database">
           <icomponents
               xsi:type="M2:ProvidedPort"
-              name="Security_Management"/>
+              name="Security_Management_Send"/>
           <icomponents
               xsi:type="M2:ProvidedPort"
-              name="Query_Interrogation"/>
+              name="Query_Interrogation_Send"/>
+          <icomponents
+              xsi:type="M2:RequiredPort"
+              name="Query_Interrogation_Receive"/>
+          <icomponents
+              xsi:type="M2:RequiredPort"
+              name="Security_Management_Receive"/>
         </elements>
         <elements
             xsi:type="M2:Connector"
             name="CM_SM">
           <iconnectors
-              xsi:type="M2:ProvidedRole"
+              xsi:type="M2:RequiredRole"
               name="Caller_CM_SM"/>
           <iconnectors
-              xsi:type="M2:RequiredRole"
+              xsi:type="M2:ProvidedRole"
               name="Called_CM_SM"/>
         </elements>
         <elements
             xsi:type="M2:Connector"
             name="SM_DB">
           <iconnectors
-              xsi:type="M2:ProvidedRole"
+              xsi:type="M2:RequiredRole"
               name="Caller_SM_DB"/>
           <iconnectors
-              xsi:type="M2:RequiredRole"
+              xsi:type="M2:ProvidedRole"
               name="Called_SM_DB"/>
         </elements>
         <elements
             xsi:type="M2:Connector"
             name="DB_CM">
           <iconnectors
-              xsi:type="M2:ProvidedRole"
+              xsi:type="M2:RequiredRole"
               name="Caller_DB_CM"/>
           <iconnectors
-              xsi:type="M2:RequiredRole"
+              xsi:type="M2:ProvidedRole"
               name="Called_DB_CM"/>
         </elements>
         <elements
             xsi:type="M2:Attachment"
             name="CM_To_CM_SM"
-            ports="//@architecturalElements.0/@elements.1/@elements.0/@elements.0/@icomponents.1"
-            roles="//@architecturalElements.0/@elements.1/@elements.0/@elements.3/@iconnectors.0"/>
+            ports="//@architecturalElements.0/@elements.1/@elements.0/@elements.0/@icomponents.0 //@architecturalElements.0/@elements.1/@elements.0/@elements.0/@icomponents.2"
+            roles="//@architecturalElements.0/@elements.1/@elements.0/@elements.3/@iconnectors.0 //@architecturalElements.0/@elements.1/@elements.0/@elements.3/@iconnectors.1"/>
         <elements
             xsi:type="M2:Attachment"
             name="CM_SM_To_SM"
-            ports="//@architecturalElements.0/@elements.1/@elements.0/@elements.1/@icomponents.0"
-            roles="//@architecturalElements.0/@elements.1/@elements.0/@elements.3/@iconnectors.1"/>
+            ports="//@architecturalElements.0/@elements.1/@elements.0/@elements.1/@icomponents.0 //@architecturalElements.0/@elements.1/@elements.0/@elements.1/@icomponents.2"
+            roles="//@architecturalElements.0/@elements.1/@elements.0/@elements.3/@iconnectors.1 //@architecturalElements.0/@elements.1/@elements.0/@elements.3/@iconnectors.0"/>
         <elements
             xsi:type="M2:Attachment"
             name="SM_To_SM_DB"
-            ports="//@architecturalElements.0/@elements.1/@elements.0/@elements.1/@icomponents.1"
-            roles="//@architecturalElements.0/@elements.1/@elements.0/@elements.4/@iconnectors.0"/>
+            ports="//@architecturalElements.0/@elements.1/@elements.0/@elements.1/@icomponents.1 //@architecturalElements.0/@elements.1/@elements.0/@elements.1/@icomponents.3"
+            roles="//@architecturalElements.0/@elements.1/@elements.0/@elements.4/@iconnectors.0 //@architecturalElements.0/@elements.1/@elements.0/@elements.4/@iconnectors.1"/>
         <elements
             xsi:type="M2:Attachment"
             name="SM_DB_To_DB"
-            ports="//@architecturalElements.0/@elements.1/@elements.0/@elements.2/@icomponents.0"
-            roles="//@architecturalElements.0/@elements.1/@elements.0/@elements.4/@iconnectors.1"/>
+            ports="//@architecturalElements.0/@elements.1/@elements.0/@elements.2/@icomponents.0 //@architecturalElements.0/@elements.1/@elements.0/@elements.2/@icomponents.3"
+            roles="//@architecturalElements.0/@elements.1/@elements.0/@elements.4/@iconnectors.1 //@architecturalElements.0/@elements.1/@elements.0/@elements.4/@iconnectors.0"/>
         <elements
             xsi:type="M2:Attachment"
             name="DB_To_DB_CM"
-            ports="//@architecturalElements.0/@elements.1/@elements.0/@elements.2/@icomponents.1"
-            roles="//@architecturalElements.0/@elements.1/@elements.0/@elements.5/@iconnectors.0"/>
+            ports="//@architecturalElements.0/@elements.1/@elements.0/@elements.2/@icomponents.1 //@architecturalElements.0/@elements.1/@elements.0/@elements.2/@icomponents.2"
+            roles="//@architecturalElements.0/@elements.1/@elements.0/@elements.5/@iconnectors.1 //@architecturalElements.0/@elements.1/@elements.0/@elements.5/@iconnectors.0"/>
         <elements
             xsi:type="M2:Attachment"
             name="DB_CM_To_CM"
-            ports="//@architecturalElements.0/@elements.1/@elements.0/@elements.0/@icomponents.2"
-            roles="//@architecturalElements.0/@elements.1/@elements.0/@elements.5/@iconnectors.1"/>
+            ports="//@architecturalElements.0/@elements.1/@elements.0/@elements.0/@icomponents.1 //@architecturalElements.0/@elements.1/@elements.0/@elements.0/@icomponents.3"
+            roles="//@architecturalElements.0/@elements.1/@elements.0/@elements.5/@iconnectors.1 //@architecturalElements.0/@elements.1/@elements.0/@elements.5/@iconnectors.0"/>
         <elements
             xsi:type="M2:Binding"
             name="ConnectionManager_Server"
-            ports="//@architecturalElements.0/@elements.1/@icomponents.0 //@architecturalElements.0/@elements.1/@elements.0/@elements.0/@icomponents.0"/>
+            ports="//@architecturalElements.0/@elements.1/@elements.0/@elements.0/@icomponents.4 //@architecturalElements.0/@elements.1/@icomponents.2"/>
       </elements>
       <icomponents
           xsi:type="M2:RequiredPort"
           name="Receive_Request"/>
+      <icomponents
+          xsi:type="M2:RequiredPort"
+          name="System_Server"/>
+      <icomponents
+          xsi:type="M2:ProvidedPort"
+          name="System_Server_Binding_Send"/>
     </elements>
     <elements
         xsi:type="M2:Connector"
         name="RPC">
       <iconnectors
-          xsi:type="M2:ProvidedRole"
+          xsi:type="M2:RequiredRole"
           name="Caller"/>
       <iconnectors
-          xsi:type="M2:RequiredRole"
+          xsi:type="M2:ProvidedRole"
           name="Called"/>
     </elements>
     <elements
@@ -152,12 +179,12 @@
     <elements
         xsi:type="M2:Binding"
         name="Server_System"
-        ports="//@architecturalElements.0/@ports.0 //@architecturalElements.0/@ports.1"/>
+        ports="//@architecturalElements.0/@ports.0 //@architecturalElements.0/@elements.1/@icomponents.1"/>
     <elements
         xsi:type="M2:Binding"
         name="Client_System"
-        ports="//@architecturalElements.0/@elements.1/@icomponents.0 //@architecturalElements.0/@elements.0/@icomponents.0"/>
-    <ports xsi:type="M2:RequiredPort"
+        ports="//@architecturalElements.0/@ports.1 //@architecturalElements.0/@elements.0/@icomponents.1"/>
+    <ports xsi:type="M2:ProvidedPort"
         name="Server_port"/>
     <ports xsi:type="M2:ProvidedPort"
         name="Client_port"/>
