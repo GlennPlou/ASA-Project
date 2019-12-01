@@ -5,6 +5,8 @@ package asaproject.model.asa.M2.impl;
 import asaproject.model.asa.M2.Binding;
 import asaproject.model.asa.M2.M2Package;
 import asaproject.model.asa.M2.Port;
+import asaproject.model.asa.M2.ProvidedPort;
+import asaproject.model.asa.M2.RequiredPort;
 
 import java.util.Collection;
 
@@ -43,8 +45,23 @@ public class BindingImpl extends LinkImpl implements Binding {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	
+	protected ProvidedPort providedPort;
+	protected RequiredPort requiredPort;
+	
+	
 	protected BindingImpl() {
 		super();
+	}
+	
+	public BindingImpl(String name) {
+		super();
+		this.name = name;
+	}
+	
+	public BindingImpl(String name, ProvidedPort providedPort, RequiredPort requiredPort) {
+		super();
+		this.name = name;
 	}
 
 	/**

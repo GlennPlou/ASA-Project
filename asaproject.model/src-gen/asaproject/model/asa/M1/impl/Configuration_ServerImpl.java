@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public abstract class Configuration_ServerImpl extends ConfigurationImpl implements Configuration_Server {
+public class Configuration_ServerImpl extends ConfigurationImpl implements Configuration_Server {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

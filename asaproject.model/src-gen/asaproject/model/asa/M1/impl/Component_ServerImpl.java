@@ -4,6 +4,7 @@ package asaproject.model.asa.M1.impl;
 
 import asaproject.model.asa.M1.Component_Server;
 import asaproject.model.asa.M1.M1Package;
+
 import asaproject.model.asa.M2.impl.ComponentImpl;
 
 import org.eclipse.emf.ecore.EClass;
@@ -15,7 +16,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public abstract class Component_ServerImpl extends ComponentImpl implements Component_Server {
+public class Component_ServerImpl extends ComponentImpl implements Component_Server {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

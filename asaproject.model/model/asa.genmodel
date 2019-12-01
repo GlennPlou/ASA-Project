@@ -13,10 +13,10 @@
     <nestedGenPackages prefix="M1" disposableProviderFactory="true" ecorePackage="asa.ecore#//M1">
       <genClasses ecoreClass="asa.ecore#//M1/Configuration_ClientServer"/>
       <genClasses ecoreClass="asa.ecore#//M1/Component_Client"/>
-      <genClasses ecoreClass="asa.ecore#//M1/Component_RPC"/>
+      <genClasses ecoreClass="asa.ecore#//M1/Connector_RPC"/>
       <genClasses ecoreClass="asa.ecore#//M1/Component_Server"/>
-      <genClasses ecoreClass="asa.ecore#//M1/Binding_Server_Syst"/>
-      <genClasses ecoreClass="asa.ecore#//M1/Binding_Client_Syst"/>
+      <genClasses ecoreClass="asa.ecore#//M1/Binding_Server_System"/>
+      <genClasses ecoreClass="asa.ecore#//M1/Binding_Client_System"/>
       <genClasses ecoreClass="asa.ecore#//M1/Attachment_Client_RPC"/>
       <genClasses ecoreClass="asa.ecore#//M1/Attachment_RPC_Server"/>
       <genClasses image="false" ecoreClass="asa.ecore#//M1/Configuration_Server"/>

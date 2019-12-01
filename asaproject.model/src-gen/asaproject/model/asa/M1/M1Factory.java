@@ -40,31 +40,40 @@ public interface M1Factory extends EFactory {
 	Component_Client createComponent_Client();
 
 	/**
-	 * Returns a new object of class '<em>Component RPC</em>'.
+	 * Returns a new object of class '<em>Connector RPC</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Component RPC</em>'.
+	 * @return a new object of class '<em>Connector RPC</em>'.
 	 * @generated
 	 */
-	Component_RPC createComponent_RPC();
+	Connector_RPC createConnector_RPC();
 
 	/**
-	 * Returns a new object of class '<em>Binding Server Syst</em>'.
+	 * Returns a new object of class '<em>Component Server</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Binding Server Syst</em>'.
+	 * @return a new object of class '<em>Component Server</em>'.
 	 * @generated
 	 */
-	Binding_Server_Syst createBinding_Server_Syst();
+	Component_Server createComponent_Server();
 
 	/**
-	 * Returns a new object of class '<em>Binding Client Syst</em>'.
+	 * Returns a new object of class '<em>Binding Server System</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Binding Client Syst</em>'.
+	 * @return a new object of class '<em>Binding Server System</em>'.
 	 * @generated
 	 */
-	Binding_Client_Syst createBinding_Client_Syst();
+	Binding_Server_System createBinding_Server_System();
+
+	/**
+	 * Returns a new object of class '<em>Binding Client System</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Binding Client System</em>'.
+	 * @generated
+	 */
+	Binding_Client_System createBinding_Client_System();
 
 	/**
 	 * Returns a new object of class '<em>Attachment Client RPC</em>'.
@@ -83,6 +92,15 @@ public interface M1Factory extends EFactory {
 	 * @generated
 	 */
 	Attachment_RPC_Server createAttachment_RPC_Server();
+
+	/**
+	 * Returns a new object of class '<em>Configuration Server</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Configuration Server</em>'.
+	 * @generated
+	 */
+	Configuration_Server createConfiguration_Server();
 
 	/**
 	 * Returns a new object of class '<em>Component Connection Manager</em>'.

@@ -23,6 +23,10 @@ public class ProvidedPortImpl extends PortImpl implements ProvidedPort {
 	protected ProvidedPortImpl() {
 		super();
 	}
+	
+	public ProvidedPortImpl(String name) {
+		super(name);
+	}
 
 	/**
 	 * <!-- begin-user-doc -->

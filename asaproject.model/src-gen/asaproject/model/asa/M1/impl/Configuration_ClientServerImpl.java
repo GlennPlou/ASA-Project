@@ -4,6 +4,7 @@ package asaproject.model.asa.M1.impl;
 
 import asaproject.model.asa.M1.Configuration_ClientServer;
 import asaproject.model.asa.M1.M1Package;
+
 import asaproject.model.asa.M2.impl.ConfigurationImpl;
 
 import org.eclipse.emf.ecore.EClass;

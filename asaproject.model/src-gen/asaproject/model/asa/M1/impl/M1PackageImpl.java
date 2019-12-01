@@ -11,18 +11,18 @@ import asaproject.model.asa.M1.Attachment_RPC_Server;
 import asaproject.model.asa.M1.Attachment_SM_CM;
 import asaproject.model.asa.M1.Attachment_SM_DB;
 import asaproject.model.asa.M1.Binding_CM_Server;
-import asaproject.model.asa.M1.Binding_Client_Syst;
-import asaproject.model.asa.M1.Binding_Server_Syst;
+import asaproject.model.asa.M1.Binding_Client_System;
+import asaproject.model.asa.M1.Binding_Server_System;
 import asaproject.model.asa.M1.Component_Client;
 import asaproject.model.asa.M1.Component_ConnectionManager;
 import asaproject.model.asa.M1.Component_Database;
-import asaproject.model.asa.M1.Component_RPC;
 import asaproject.model.asa.M1.Component_SecurityManager;
 import asaproject.model.asa.M1.Component_Server;
 import asaproject.model.asa.M1.Configuration_ClientServer;
 import asaproject.model.asa.M1.Configuration_Server;
 import asaproject.model.asa.M1.Connector_CM_DB;
 import asaproject.model.asa.M1.Connector_CM_SM;
+import asaproject.model.asa.M1.Connector_RPC;
 import asaproject.model.asa.M1.Connector_SM_DB;
 import asaproject.model.asa.M1.M1Factory;
 import asaproject.model.asa.M1.M1Package;
@@ -62,7 +62,7 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass component_RPCEClass = null;
+	private EClass connector_RPCEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -76,14 +76,14 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass binding_Server_SystEClass = null;
+	private EClass binding_Server_SystemEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass binding_Client_SystEClass = null;
+	private EClass binding_Client_SystemEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -290,8 +290,8 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getComponent_RPC() {
-		return component_RPCEClass;
+	public EClass getConnector_RPC() {
+		return connector_RPCEClass;
 	}
 
 	/**
@@ -308,8 +308,8 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getBinding_Server_Syst() {
-		return binding_Server_SystEClass;
+	public EClass getBinding_Server_System() {
+		return binding_Server_SystemEClass;
 	}
 
 	/**
@@ -317,8 +317,8 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getBinding_Client_Syst() {
-		return binding_Client_SystEClass;
+	public EClass getBinding_Client_System() {
+		return binding_Client_SystemEClass;
 	}
 
 	/**
@@ -498,13 +498,13 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 
 		component_ClientEClass = createEClass(COMPONENT_CLIENT);
 
-		component_RPCEClass = createEClass(COMPONENT_RPC);
+		connector_RPCEClass = createEClass(CONNECTOR_RPC);
 
 		component_ServerEClass = createEClass(COMPONENT_SERVER);
 
-		binding_Server_SystEClass = createEClass(BINDING_SERVER_SYST);
+		binding_Server_SystemEClass = createEClass(BINDING_SERVER_SYSTEM);
 
-		binding_Client_SystEClass = createEClass(BINDING_CLIENT_SYST);
+		binding_Client_SystemEClass = createEClass(BINDING_CLIENT_SYSTEM);
 
 		attachment_Client_RPCEClass = createEClass(ATTACHMENT_CLIENT_RPC);
 
@@ -573,10 +573,10 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 		// Add supertypes to classes
 		configuration_ClientServerEClass.getESuperTypes().add(theM2Package.getConfiguration());
 		component_ClientEClass.getESuperTypes().add(theM2Package.getComponent());
-		component_RPCEClass.getESuperTypes().add(theM2Package.getConnector());
+		connector_RPCEClass.getESuperTypes().add(theM2Package.getConnector());
 		component_ServerEClass.getESuperTypes().add(theM2Package.getComponent());
-		binding_Server_SystEClass.getESuperTypes().add(theM2Package.getBinding());
-		binding_Client_SystEClass.getESuperTypes().add(theM2Package.getBinding());
+		binding_Server_SystemEClass.getESuperTypes().add(theM2Package.getBinding());
+		binding_Client_SystemEClass.getESuperTypes().add(theM2Package.getBinding());
 		attachment_Client_RPCEClass.getESuperTypes().add(theM2Package.getAttachment());
 		attachment_RPC_ServerEClass.getESuperTypes().add(theM2Package.getAttachment());
 		configuration_ServerEClass.getESuperTypes().add(theM2Package.getConfiguration());
@@ -601,16 +601,16 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 		initEClass(component_ClientEClass, Component_Client.class, "Component_Client", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(component_RPCEClass, Component_RPC.class, "Component_RPC", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(connector_RPCEClass, Connector_RPC.class, "Connector_RPC", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(component_ServerEClass, Component_Server.class, "Component_Server", IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(component_ServerEClass, Component_Server.class, "Component_Server", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(binding_Server_SystEClass, Binding_Server_Syst.class, "Binding_Server_Syst", !IS_ABSTRACT,
+		initEClass(binding_Server_SystemEClass, Binding_Server_System.class, "Binding_Server_System", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(binding_Client_SystEClass, Binding_Client_Syst.class, "Binding_Client_Syst", !IS_ABSTRACT,
+		initEClass(binding_Client_SystemEClass, Binding_Client_System.class, "Binding_Client_System", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(attachment_Client_RPCEClass, Attachment_Client_RPC.class, "Attachment_Client_RPC", !IS_ABSTRACT,
@@ -619,7 +619,7 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 		initEClass(attachment_RPC_ServerEClass, Attachment_RPC_Server.class, "Attachment_RPC_Server", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(configuration_ServerEClass, Configuration_Server.class, "Configuration_Server", IS_ABSTRACT,
+		initEClass(configuration_ServerEClass, Configuration_Server.class, "Configuration_Server", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(component_ConnectionManagerEClass, Component_ConnectionManager.class, "Component_ConnectionManager",

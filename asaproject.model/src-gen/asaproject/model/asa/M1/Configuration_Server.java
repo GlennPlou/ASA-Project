@@ -11,7 +11,7 @@ import asaproject.model.asa.M2.Configuration;
  *
  *
  * @see asaproject.model.asa.M1.M1Package#getConfiguration_Server()
- * @model abstract="true"
+ * @model
  * @generated
  */
 public interface Configuration_Server extends Configuration {

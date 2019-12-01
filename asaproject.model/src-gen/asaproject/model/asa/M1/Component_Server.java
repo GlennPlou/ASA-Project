@@ -11,7 +11,7 @@ import asaproject.model.asa.M2.Component;
  *
  *
  * @see asaproject.model.asa.M1.M1Package#getComponent_Server()
- * @model abstract="true"
+ * @model
  * @generated
  */
 public interface Component_Server extends Component {

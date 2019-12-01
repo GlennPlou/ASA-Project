@@ -85,8 +85,8 @@ public class M1AdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseComponent_RPC(Component_RPC object) {
-			return createComponent_RPCAdapter();
+		public Adapter caseConnector_RPC(Connector_RPC object) {
+			return createConnector_RPCAdapter();
 		}
 
 		@Override
@@ -95,13 +95,13 @@ public class M1AdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseBinding_Server_Syst(Binding_Server_Syst object) {
-			return createBinding_Server_SystAdapter();
+		public Adapter caseBinding_Server_System(Binding_Server_System object) {
+			return createBinding_Server_SystemAdapter();
 		}
 
 		@Override
-		public Adapter caseBinding_Client_Syst(Binding_Client_Syst object) {
-			return createBinding_Client_SystAdapter();
+		public Adapter caseBinding_Client_System(Binding_Client_System object) {
+			return createBinding_Client_SystemAdapter();
 		}
 
 		@Override
@@ -267,16 +267,16 @@ public class M1AdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link asaproject.model.asa.M1.Component_RPC <em>Component RPC</em>}'.
+	 * Creates a new adapter for an object of class '{@link asaproject.model.asa.M1.Connector_RPC <em>Connector RPC</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see asaproject.model.asa.M1.Component_RPC
+	 * @see asaproject.model.asa.M1.Connector_RPC
 	 * @generated
 	 */
-	public Adapter createComponent_RPCAdapter() {
+	public Adapter createConnector_RPCAdapter() {
 		return null;
 	}
 
@@ -295,30 +295,30 @@ public class M1AdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link asaproject.model.asa.M1.Binding_Server_Syst <em>Binding Server Syst</em>}'.
+	 * Creates a new adapter for an object of class '{@link asaproject.model.asa.M1.Binding_Server_System <em>Binding Server System</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see asaproject.model.asa.M1.Binding_Server_Syst
+	 * @see asaproject.model.asa.M1.Binding_Server_System
 	 * @generated
 	 */
-	public Adapter createBinding_Server_SystAdapter() {
+	public Adapter createBinding_Server_SystemAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link asaproject.model.asa.M1.Binding_Client_Syst <em>Binding Client Syst</em>}'.
+	 * Creates a new adapter for an object of class '{@link asaproject.model.asa.M1.Binding_Client_System <em>Binding Client System</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see asaproject.model.asa.M1.Binding_Client_Syst
+	 * @see asaproject.model.asa.M1.Binding_Client_System
 	 * @generated
 	 */
-	public Adapter createBinding_Client_SystAdapter() {
+	public Adapter createBinding_Client_SystemAdapter() {
 		return null;
 	}
 

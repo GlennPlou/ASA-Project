@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -63,6 +64,17 @@ public class ComponentImpl extends ArchitecturalElementImpl implements Component
 	 */
 	protected ComponentImpl() {
 		super();
+	}
+	
+	public ComponentImpl(String name) {
+		super();
+		this.name = name;
+	}
+	
+	public ComponentImpl(String name, Configuration configuration) {
+		super();
+		this.name = name;
+		this.configuration = configuration;
 	}
 
 	/**

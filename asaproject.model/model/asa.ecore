@@ -4,10 +4,10 @@
   <eSubpackages name="M1" nsURI="http://www.example.org/M1" nsPrefix="M1">
     <eClassifiers xsi:type="ecore:EClass" name="Configuration_ClientServer" eSuperTypes="#//M2/Configuration"/>
     <eClassifiers xsi:type="ecore:EClass" name="Component_Client" eSuperTypes="#//M2/Component"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Component_RPC" eSuperTypes="#//M2/Connector"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Connector_RPC" eSuperTypes="#//M2/Connector"/>
     <eClassifiers xsi:type="ecore:EClass" name="Component_Server" eSuperTypes="#//M2/Component"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Binding_Server_Syst" eSuperTypes="#//M2/Binding"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Binding_Client_Syst" eSuperTypes="#//M2/Binding"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Binding_Server_System" eSuperTypes="#//M2/Binding"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Binding_Client_System" eSuperTypes="#//M2/Binding"/>
     <eClassifiers xsi:type="ecore:EClass" name="Attachment_Client_RPC" eSuperTypes="#//M2/Attachment"/>
     <eClassifiers xsi:type="ecore:EClass" name="Attachment_RPC_Server" eSuperTypes="#//M2/Attachment"/>
     <eClassifiers xsi:type="ecore:EClass" name="Configuration_Server" eSuperTypes="#//M2/Configuration"/>

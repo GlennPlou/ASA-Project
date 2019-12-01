@@ -230,14 +230,14 @@ public interface M1Package extends EPackage {
 	int COMPONENT_CLIENT_OPERATION_COUNT = M2Package.COMPONENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link asaproject.model.asa.M1.impl.Component_RPCImpl <em>Component RPC</em>}' class.
+	 * The meta object id for the '{@link asaproject.model.asa.M1.impl.Connector_RPCImpl <em>Connector RPC</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see asaproject.model.asa.M1.impl.Component_RPCImpl
-	 * @see asaproject.model.asa.M1.impl.M1PackageImpl#getComponent_RPC()
+	 * @see asaproject.model.asa.M1.impl.Connector_RPCImpl
+	 * @see asaproject.model.asa.M1.impl.M1PackageImpl#getConnector_RPC()
 	 * @generated
 	 */
-	int COMPONENT_RPC = 2;
+	int CONNECTOR_RPC = 2;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -246,7 +246,7 @@ public interface M1Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_RPC__PROPERTIES = M2Package.CONNECTOR__PROPERTIES;
+	int CONNECTOR_RPC__PROPERTIES = M2Package.CONNECTOR__PROPERTIES;
 
 	/**
 	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
@@ -255,7 +255,7 @@ public interface M1Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_RPC__ELEMENTS = M2Package.CONNECTOR__ELEMENTS;
+	int CONNECTOR_RPC__ELEMENTS = M2Package.CONNECTOR__ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' container reference.
@@ -264,7 +264,7 @@ public interface M1Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_RPC__PARENT = M2Package.CONNECTOR__PARENT;
+	int CONNECTOR_RPC__PARENT = M2Package.CONNECTOR__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -273,7 +273,7 @@ public interface M1Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_RPC__NAME = M2Package.CONNECTOR__NAME;
+	int CONNECTOR_RPC__NAME = M2Package.CONNECTOR__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Glue</b></em>' containment reference.
@@ -282,7 +282,7 @@ public interface M1Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_RPC__GLUE = M2Package.CONNECTOR__GLUE;
+	int CONNECTOR_RPC__GLUE = M2Package.CONNECTOR__GLUE;
 
 	/**
 	 * The feature id for the '<em><b>Iconnectors</b></em>' containment reference list.
@@ -291,25 +291,25 @@ public interface M1Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_RPC__ICONNECTORS = M2Package.CONNECTOR__ICONNECTORS;
+	int CONNECTOR_RPC__ICONNECTORS = M2Package.CONNECTOR__ICONNECTORS;
 
 	/**
-	 * The number of structural features of the '<em>Component RPC</em>' class.
+	 * The number of structural features of the '<em>Connector RPC</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_RPC_FEATURE_COUNT = M2Package.CONNECTOR_FEATURE_COUNT + 0;
+	int CONNECTOR_RPC_FEATURE_COUNT = M2Package.CONNECTOR_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Component RPC</em>' class.
+	 * The number of operations of the '<em>Connector RPC</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_RPC_OPERATION_COUNT = M2Package.CONNECTOR_OPERATION_COUNT + 0;
+	int CONNECTOR_RPC_OPERATION_COUNT = M2Package.CONNECTOR_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link asaproject.model.asa.M1.impl.Component_ServerImpl <em>Component Server</em>}' class.
@@ -394,14 +394,14 @@ public interface M1Package extends EPackage {
 	int COMPONENT_SERVER_OPERATION_COUNT = M2Package.COMPONENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link asaproject.model.asa.M1.impl.Binding_Server_SystImpl <em>Binding Server Syst</em>}' class.
+	 * The meta object id for the '{@link asaproject.model.asa.M1.impl.Binding_Server_SystemImpl <em>Binding Server System</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see asaproject.model.asa.M1.impl.Binding_Server_SystImpl
-	 * @see asaproject.model.asa.M1.impl.M1PackageImpl#getBinding_Server_Syst()
+	 * @see asaproject.model.asa.M1.impl.Binding_Server_SystemImpl
+	 * @see asaproject.model.asa.M1.impl.M1PackageImpl#getBinding_Server_System()
 	 * @generated
 	 */
-	int BINDING_SERVER_SYST = 4;
+	int BINDING_SERVER_SYSTEM = 4;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -410,7 +410,7 @@ public interface M1Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BINDING_SERVER_SYST__PROPERTIES = M2Package.BINDING__PROPERTIES;
+	int BINDING_SERVER_SYSTEM__PROPERTIES = M2Package.BINDING__PROPERTIES;
 
 	/**
 	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
@@ -419,7 +419,7 @@ public interface M1Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BINDING_SERVER_SYST__ELEMENTS = M2Package.BINDING__ELEMENTS;
+	int BINDING_SERVER_SYSTEM__ELEMENTS = M2Package.BINDING__ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' container reference.
@@ -428,7 +428,7 @@ public interface M1Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BINDING_SERVER_SYST__PARENT = M2Package.BINDING__PARENT;
+	int BINDING_SERVER_SYSTEM__PARENT = M2Package.BINDING__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -437,7 +437,7 @@ public interface M1Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BINDING_SERVER_SYST__NAME = M2Package.BINDING__NAME;
+	int BINDING_SERVER_SYSTEM__NAME = M2Package.BINDING__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Ports</b></em>' reference list.
@@ -446,35 +446,35 @@ public interface M1Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BINDING_SERVER_SYST__PORTS = M2Package.BINDING__PORTS;
+	int BINDING_SERVER_SYSTEM__PORTS = M2Package.BINDING__PORTS;
 
 	/**
-	 * The number of structural features of the '<em>Binding Server Syst</em>' class.
+	 * The number of structural features of the '<em>Binding Server System</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BINDING_SERVER_SYST_FEATURE_COUNT = M2Package.BINDING_FEATURE_COUNT + 0;
+	int BINDING_SERVER_SYSTEM_FEATURE_COUNT = M2Package.BINDING_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Binding Server Syst</em>' class.
+	 * The number of operations of the '<em>Binding Server System</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BINDING_SERVER_SYST_OPERATION_COUNT = M2Package.BINDING_OPERATION_COUNT + 0;
+	int BINDING_SERVER_SYSTEM_OPERATION_COUNT = M2Package.BINDING_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link asaproject.model.asa.M1.impl.Binding_Client_SystImpl <em>Binding Client Syst</em>}' class.
+	 * The meta object id for the '{@link asaproject.model.asa.M1.impl.Binding_Client_SystemImpl <em>Binding Client System</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see asaproject.model.asa.M1.impl.Binding_Client_SystImpl
-	 * @see asaproject.model.asa.M1.impl.M1PackageImpl#getBinding_Client_Syst()
+	 * @see asaproject.model.asa.M1.impl.Binding_Client_SystemImpl
+	 * @see asaproject.model.asa.M1.impl.M1PackageImpl#getBinding_Client_System()
 	 * @generated
 	 */
-	int BINDING_CLIENT_SYST = 5;
+	int BINDING_CLIENT_SYSTEM = 5;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -483,7 +483,7 @@ public interface M1Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BINDING_CLIENT_SYST__PROPERTIES = M2Package.BINDING__PROPERTIES;
+	int BINDING_CLIENT_SYSTEM__PROPERTIES = M2Package.BINDING__PROPERTIES;
 
 	/**
 	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
@@ -492,7 +492,7 @@ public interface M1Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BINDING_CLIENT_SYST__ELEMENTS = M2Package.BINDING__ELEMENTS;
+	int BINDING_CLIENT_SYSTEM__ELEMENTS = M2Package.BINDING__ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' container reference.
@@ -501,7 +501,7 @@ public interface M1Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BINDING_CLIENT_SYST__PARENT = M2Package.BINDING__PARENT;
+	int BINDING_CLIENT_SYSTEM__PARENT = M2Package.BINDING__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -510,7 +510,7 @@ public interface M1Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BINDING_CLIENT_SYST__NAME = M2Package.BINDING__NAME;
+	int BINDING_CLIENT_SYSTEM__NAME = M2Package.BINDING__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Ports</b></em>' reference list.
@@ -519,25 +519,25 @@ public interface M1Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BINDING_CLIENT_SYST__PORTS = M2Package.BINDING__PORTS;
+	int BINDING_CLIENT_SYSTEM__PORTS = M2Package.BINDING__PORTS;
 
 	/**
-	 * The number of structural features of the '<em>Binding Client Syst</em>' class.
+	 * The number of structural features of the '<em>Binding Client System</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BINDING_CLIENT_SYST_FEATURE_COUNT = M2Package.BINDING_FEATURE_COUNT + 0;
+	int BINDING_CLIENT_SYSTEM_FEATURE_COUNT = M2Package.BINDING_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Binding Client Syst</em>' class.
+	 * The number of operations of the '<em>Binding Client System</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BINDING_CLIENT_SYST_OPERATION_COUNT = M2Package.BINDING_OPERATION_COUNT + 0;
+	int BINDING_CLIENT_SYSTEM_OPERATION_COUNT = M2Package.BINDING_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link asaproject.model.asa.M1.impl.Attachment_Client_RPCImpl <em>Attachment Client RPC</em>}' class.
@@ -1872,14 +1872,14 @@ public interface M1Package extends EPackage {
 	EClass getComponent_Client();
 
 	/**
-	 * Returns the meta object for class '{@link asaproject.model.asa.M1.Component_RPC <em>Component RPC</em>}'.
+	 * Returns the meta object for class '{@link asaproject.model.asa.M1.Connector_RPC <em>Connector RPC</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Component RPC</em>'.
-	 * @see asaproject.model.asa.M1.Component_RPC
+	 * @return the meta object for class '<em>Connector RPC</em>'.
+	 * @see asaproject.model.asa.M1.Connector_RPC
 	 * @generated
 	 */
-	EClass getComponent_RPC();
+	EClass getConnector_RPC();
 
 	/**
 	 * Returns the meta object for class '{@link asaproject.model.asa.M1.Component_Server <em>Component Server</em>}'.
@@ -1892,24 +1892,24 @@ public interface M1Package extends EPackage {
 	EClass getComponent_Server();
 
 	/**
-	 * Returns the meta object for class '{@link asaproject.model.asa.M1.Binding_Server_Syst <em>Binding Server Syst</em>}'.
+	 * Returns the meta object for class '{@link asaproject.model.asa.M1.Binding_Server_System <em>Binding Server System</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Binding Server Syst</em>'.
-	 * @see asaproject.model.asa.M1.Binding_Server_Syst
+	 * @return the meta object for class '<em>Binding Server System</em>'.
+	 * @see asaproject.model.asa.M1.Binding_Server_System
 	 * @generated
 	 */
-	EClass getBinding_Server_Syst();
+	EClass getBinding_Server_System();
 
 	/**
-	 * Returns the meta object for class '{@link asaproject.model.asa.M1.Binding_Client_Syst <em>Binding Client Syst</em>}'.
+	 * Returns the meta object for class '{@link asaproject.model.asa.M1.Binding_Client_System <em>Binding Client System</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Binding Client Syst</em>'.
-	 * @see asaproject.model.asa.M1.Binding_Client_Syst
+	 * @return the meta object for class '<em>Binding Client System</em>'.
+	 * @see asaproject.model.asa.M1.Binding_Client_System
 	 * @generated
 	 */
-	EClass getBinding_Client_Syst();
+	EClass getBinding_Client_System();
 
 	/**
 	 * Returns the meta object for class '{@link asaproject.model.asa.M1.Attachment_Client_RPC <em>Attachment Client RPC</em>}'.
@@ -2115,14 +2115,14 @@ public interface M1Package extends EPackage {
 		EClass COMPONENT_CLIENT = eINSTANCE.getComponent_Client();
 
 		/**
-		 * The meta object literal for the '{@link asaproject.model.asa.M1.impl.Component_RPCImpl <em>Component RPC</em>}' class.
+		 * The meta object literal for the '{@link asaproject.model.asa.M1.impl.Connector_RPCImpl <em>Connector RPC</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see asaproject.model.asa.M1.impl.Component_RPCImpl
-		 * @see asaproject.model.asa.M1.impl.M1PackageImpl#getComponent_RPC()
+		 * @see asaproject.model.asa.M1.impl.Connector_RPCImpl
+		 * @see asaproject.model.asa.M1.impl.M1PackageImpl#getConnector_RPC()
 		 * @generated
 		 */
-		EClass COMPONENT_RPC = eINSTANCE.getComponent_RPC();
+		EClass CONNECTOR_RPC = eINSTANCE.getConnector_RPC();
 
 		/**
 		 * The meta object literal for the '{@link asaproject.model.asa.M1.impl.Component_ServerImpl <em>Component Server</em>}' class.
@@ -2135,24 +2135,24 @@ public interface M1Package extends EPackage {
 		EClass COMPONENT_SERVER = eINSTANCE.getComponent_Server();
 
 		/**
-		 * The meta object literal for the '{@link asaproject.model.asa.M1.impl.Binding_Server_SystImpl <em>Binding Server Syst</em>}' class.
+		 * The meta object literal for the '{@link asaproject.model.asa.M1.impl.Binding_Server_SystemImpl <em>Binding Server System</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see asaproject.model.asa.M1.impl.Binding_Server_SystImpl
-		 * @see asaproject.model.asa.M1.impl.M1PackageImpl#getBinding_Server_Syst()
+		 * @see asaproject.model.asa.M1.impl.Binding_Server_SystemImpl
+		 * @see asaproject.model.asa.M1.impl.M1PackageImpl#getBinding_Server_System()
 		 * @generated
 		 */
-		EClass BINDING_SERVER_SYST = eINSTANCE.getBinding_Server_Syst();
+		EClass BINDING_SERVER_SYSTEM = eINSTANCE.getBinding_Server_System();
 
 		/**
-		 * The meta object literal for the '{@link asaproject.model.asa.M1.impl.Binding_Client_SystImpl <em>Binding Client Syst</em>}' class.
+		 * The meta object literal for the '{@link asaproject.model.asa.M1.impl.Binding_Client_SystemImpl <em>Binding Client System</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see asaproject.model.asa.M1.impl.Binding_Client_SystImpl
-		 * @see asaproject.model.asa.M1.impl.M1PackageImpl#getBinding_Client_Syst()
+		 * @see asaproject.model.asa.M1.impl.Binding_Client_SystemImpl
+		 * @see asaproject.model.asa.M1.impl.M1PackageImpl#getBinding_Client_System()
 		 * @generated
 		 */
-		EClass BINDING_CLIENT_SYST = eINSTANCE.getBinding_Client_Syst();
+		EClass BINDING_CLIENT_SYSTEM = eINSTANCE.getBinding_Client_System();
 
 		/**
 		 * The meta object literal for the '{@link asaproject.model.asa.M1.impl.Attachment_Client_RPCImpl <em>Attachment Client RPC</em>}' class.

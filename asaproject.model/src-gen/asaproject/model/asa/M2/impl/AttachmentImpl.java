@@ -5,11 +5,18 @@ package asaproject.model.asa.M2.impl;
 import asaproject.model.asa.M2.Attachment;
 import asaproject.model.asa.M2.M2Package;
 import asaproject.model.asa.M2.Port;
+import asaproject.model.asa.M2.ProvidedPort;
+import asaproject.model.asa.M2.ProvidedRole;
+import asaproject.model.asa.M2.RequiredPort;
+import asaproject.model.asa.M2.RequiredRole;
 import asaproject.model.asa.M2.Role;
 
 import java.util.Collection;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
@@ -46,6 +53,12 @@ public class AttachmentImpl extends LinkImpl implements Attachment {
 	 * @ordered
 	 */
 	protected EList<Role> roles;
+	
+	protected ProvidedPort providedPort;
+	protected RequiredPort requiredPort;
+	protected ProvidedRole providedRole;
+	protected RequiredRole requiredRole;
+	
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -54,6 +67,53 @@ public class AttachmentImpl extends LinkImpl implements Attachment {
 	 */
 	protected AttachmentImpl() {
 		super();
+	}
+	
+	public AttachmentImpl(String name) {
+		super();
+		this.name = name;
+	}
+	
+	public AttachmentImpl(String name, ProvidedPort providedPort, RequiredRole requiredRole) {
+		super();
+		this.name = name;
+		this.setAttachment(providedPort, requiredRole);
+	}
+	
+	public AttachmentImpl(String name, RequiredPort requiredPort, ProvidedRole providedRole) {
+		super();
+		this.name = name;
+		this.setAttachment(requiredPort, providedRole);
+	}
+	
+	public void setAttachment(ProvidedPort providedPort, RequiredRole requiredRole) {
+		this.providedPort = providedPort;
+		this.requiredRole = requiredRole;
+		this.ports.add(providedPort);
+		this.roles.add(requiredRole);
+	}
+	
+	public void setAttachment(RequiredPort requiredPort, ProvidedRole providedRole) {
+		this.requiredPort = requiredPort;
+		this.providedRole = providedRole;
+		this.ports.add(requiredPort);
+		this.roles.add(providedRole);
+	}
+
+	public ProvidedPort getProvidedPort() {
+		return providedPort;
+	}
+
+	public RequiredPort getRequiredPort() {
+		return requiredPort;
+	}
+
+	public ProvidedRole getProvidedRole() {
+		return providedRole;
+	}
+
+	public RequiredRole getRequiredRole() {
+		return requiredRole;
 	}
 
 	/**

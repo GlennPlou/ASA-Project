@@ -96,13 +96,13 @@ public class M1Switch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case M1Package.COMPONENT_RPC: {
-			Component_RPC component_RPC = (Component_RPC) theEObject;
-			T result = caseComponent_RPC(component_RPC);
+		case M1Package.CONNECTOR_RPC: {
+			Connector_RPC connector_RPC = (Connector_RPC) theEObject;
+			T result = caseConnector_RPC(connector_RPC);
 			if (result == null)
-				result = caseConnector(component_RPC);
+				result = caseConnector(connector_RPC);
 			if (result == null)
-				result = caseArchitecturalElement(component_RPC);
+				result = caseArchitecturalElement(connector_RPC);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -118,28 +118,28 @@ public class M1Switch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case M1Package.BINDING_SERVER_SYST: {
-			Binding_Server_Syst binding_Server_Syst = (Binding_Server_Syst) theEObject;
-			T result = caseBinding_Server_Syst(binding_Server_Syst);
+		case M1Package.BINDING_SERVER_SYSTEM: {
+			Binding_Server_System binding_Server_System = (Binding_Server_System) theEObject;
+			T result = caseBinding_Server_System(binding_Server_System);
 			if (result == null)
-				result = caseBinding(binding_Server_Syst);
+				result = caseBinding(binding_Server_System);
 			if (result == null)
-				result = caseLink(binding_Server_Syst);
+				result = caseLink(binding_Server_System);
 			if (result == null)
-				result = caseArchitecturalElement(binding_Server_Syst);
+				result = caseArchitecturalElement(binding_Server_System);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case M1Package.BINDING_CLIENT_SYST: {
-			Binding_Client_Syst binding_Client_Syst = (Binding_Client_Syst) theEObject;
-			T result = caseBinding_Client_Syst(binding_Client_Syst);
+		case M1Package.BINDING_CLIENT_SYSTEM: {
+			Binding_Client_System binding_Client_System = (Binding_Client_System) theEObject;
+			T result = caseBinding_Client_System(binding_Client_System);
 			if (result == null)
-				result = caseBinding(binding_Client_Syst);
+				result = caseBinding(binding_Client_System);
 			if (result == null)
-				result = caseLink(binding_Client_Syst);
+				result = caseLink(binding_Client_System);
 			if (result == null)
-				result = caseArchitecturalElement(binding_Client_Syst);
+				result = caseArchitecturalElement(binding_Client_System);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -374,17 +374,17 @@ public class M1Switch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Component RPC</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Connector RPC</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Component RPC</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Connector RPC</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseComponent_RPC(Component_RPC object) {
+	public T caseConnector_RPC(Connector_RPC object) {
 		return null;
 	}
 
@@ -404,32 +404,32 @@ public class M1Switch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Binding Server Syst</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Binding Server System</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Binding Server Syst</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Binding Server System</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseBinding_Server_Syst(Binding_Server_Syst object) {
+	public T caseBinding_Server_System(Binding_Server_System object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Binding Client Syst</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Binding Client System</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Binding Client Syst</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Binding Client System</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseBinding_Client_Syst(Binding_Client_Syst object) {
+	public T caseBinding_Client_System(Binding_Client_System object) {
 		return null;
 	}
 

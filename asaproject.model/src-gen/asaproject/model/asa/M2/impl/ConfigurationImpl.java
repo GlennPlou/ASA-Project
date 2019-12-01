@@ -235,5 +235,23 @@ public class ConfigurationImpl extends ArchitecturalElementImpl implements Confi
 		}
 		return super.eIsSet(featureID);
 	}
+	
+	public void addComponent(Component component) {
+        this.components.add(component);
+        this.elements.add(component);
+        component.setConfiguration(this);
+        component.setParent(this);
+    }
+	
+	public void addConnector(Connector connector) {
+    	this.connectors.add(connector);
+    	this.elements.add(connector);
+    	connector.setParent(this);
+    }
+	
+	public void addPort(Port port) {
+    	this.ports.add(port);
+    	port.setConfiguration(this);
+    }
 
 } //ConfigurationImpl

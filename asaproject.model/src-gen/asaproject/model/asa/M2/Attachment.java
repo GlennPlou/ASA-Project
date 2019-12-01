@@ -33,7 +33,7 @@ public interface Attachment extends Link {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ports</em>' reference list.
 	 * @see asaproject.model.asa.M2.M2Package#getAttachment_Ports()
-	 * @model required="true"
+	 * @model required="true" upper="2"
 	 * @generated
 	 */
 	EList<Port> getPorts();
@@ -49,7 +49,7 @@ public interface Attachment extends Link {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Roles</em>' reference list.
 	 * @see asaproject.model.asa.M2.M2Package#getAttachment_Roles()
-	 * @model required="true"
+	 * @model required="true" upper="2"
 	 * @generated
 	 */
 	EList<Role> getRoles();

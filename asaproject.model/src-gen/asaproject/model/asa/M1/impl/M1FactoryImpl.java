@@ -59,16 +59,20 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 			return createConfiguration_ClientServer();
 		case M1Package.COMPONENT_CLIENT:
 			return createComponent_Client();
-		case M1Package.COMPONENT_RPC:
-			return createComponent_RPC();
-		case M1Package.BINDING_SERVER_SYST:
-			return createBinding_Server_Syst();
-		case M1Package.BINDING_CLIENT_SYST:
-			return createBinding_Client_Syst();
+		case M1Package.CONNECTOR_RPC:
+			return createConnector_RPC();
+		case M1Package.COMPONENT_SERVER:
+			return createComponent_Server();
+		case M1Package.BINDING_SERVER_SYSTEM:
+			return createBinding_Server_System();
+		case M1Package.BINDING_CLIENT_SYSTEM:
+			return createBinding_Client_System();
 		case M1Package.ATTACHMENT_CLIENT_RPC:
 			return createAttachment_Client_RPC();
 		case M1Package.ATTACHMENT_RPC_SERVER:
 			return createAttachment_RPC_Server();
+		case M1Package.CONFIGURATION_SERVER:
+			return createConfiguration_Server();
 		case M1Package.COMPONENT_CONNECTION_MANAGER:
 			return createComponent_ConnectionManager();
 		case M1Package.COMPONENT_DATABASE:
@@ -125,9 +129,9 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Component_RPC createComponent_RPC() {
-		Component_RPCImpl component_RPC = new Component_RPCImpl();
-		return component_RPC;
+	public Connector_RPC createConnector_RPC() {
+		Connector_RPCImpl connector_RPC = new Connector_RPCImpl();
+		return connector_RPC;
 	}
 
 	/**
@@ -135,9 +139,9 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Binding_Server_Syst createBinding_Server_Syst() {
-		Binding_Server_SystImpl binding_Server_Syst = new Binding_Server_SystImpl();
-		return binding_Server_Syst;
+	public Component_Server createComponent_Server() {
+		Component_ServerImpl component_Server = new Component_ServerImpl();
+		return component_Server;
 	}
 
 	/**
@@ -145,9 +149,19 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Binding_Client_Syst createBinding_Client_Syst() {
-		Binding_Client_SystImpl binding_Client_Syst = new Binding_Client_SystImpl();
-		return binding_Client_Syst;
+	public Binding_Server_System createBinding_Server_System() {
+		Binding_Server_SystemImpl binding_Server_System = new Binding_Server_SystemImpl();
+		return binding_Server_System;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Binding_Client_System createBinding_Client_System() {
+		Binding_Client_SystemImpl binding_Client_System = new Binding_Client_SystemImpl();
+		return binding_Client_System;
 	}
 
 	/**
@@ -168,6 +182,16 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	public Attachment_RPC_Server createAttachment_RPC_Server() {
 		Attachment_RPC_ServerImpl attachment_RPC_Server = new Attachment_RPC_ServerImpl();
 		return attachment_RPC_Server;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Configuration_Server createConfiguration_Server() {
+		Configuration_ServerImpl configuration_Server = new Configuration_ServerImpl();
+		return configuration_Server;
 	}
 
 	/**

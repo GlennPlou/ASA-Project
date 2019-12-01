@@ -872,10 +872,10 @@ public class M2PackageImpl extends EPackageImpl implements M2Package {
 
 		initEClass(attachmentEClass, Attachment.class, "Attachment", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAttachment_Ports(), this.getPort(), null, "ports", null, 1, -1, Attachment.class,
+		initEReference(getAttachment_Ports(), this.getPort(), null, "ports", null, 1, 2, Attachment.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAttachment_Roles(), this.getRole(), null, "roles", null, 1, -1, Attachment.class,
+		initEReference(getAttachment_Roles(), this.getRole(), null, "roles", null, 1, 2, Attachment.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

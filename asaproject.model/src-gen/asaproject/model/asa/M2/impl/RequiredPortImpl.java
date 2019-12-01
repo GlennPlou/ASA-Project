@@ -23,6 +23,10 @@ public class RequiredPortImpl extends PortImpl implements RequiredPort {
 	protected RequiredPortImpl() {
 		super();
 	}
+	
+	public RequiredPortImpl(String name) {
+		super(name);
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
