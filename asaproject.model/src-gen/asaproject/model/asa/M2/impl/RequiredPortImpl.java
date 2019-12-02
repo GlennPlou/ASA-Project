@@ -2,6 +2,8 @@
  */
 package asaproject.model.asa.M2.impl;
 
+import asaproject.model.asa.M2.Component;
+import asaproject.model.asa.M2.Configuration;
 import asaproject.model.asa.M2.M2Package;
 import asaproject.model.asa.M2.RequiredPort;
 
@@ -26,6 +28,16 @@ public class RequiredPortImpl extends PortImpl implements RequiredPort {
 	
 	public RequiredPortImpl(String name) {
 		super(name);
+	}
+	
+	public RequiredPortImpl configuration(Configuration configuration) {
+    	this.setConfiguration(configuration);
+    	return this;
+    }
+	
+	public RequiredPortImpl component(Component component) {
+		this.setComponent(component);
+		return this;
 	}
 
 	/**

@@ -71,33 +71,35 @@ public class AttachmentImpl extends LinkImpl implements Attachment {
 	
 	public AttachmentImpl(String name) {
 		super();
-		this.name = name;
+		this.setName(name);
 	}
 	
 	public AttachmentImpl(String name, ProvidedPort providedPort, RequiredRole requiredRole) {
 		super();
-		this.name = name;
+		this.setName(name);
 		this.setAttachment(providedPort, requiredRole);
 	}
 	
 	public AttachmentImpl(String name, RequiredPort requiredPort, ProvidedRole providedRole) {
 		super();
-		this.name = name;
+		this.setName(name);
 		this.setAttachment(requiredPort, providedRole);
 	}
 	
-	public void setAttachment(ProvidedPort providedPort, RequiredRole requiredRole) {
+	public AttachmentImpl setAttachment(ProvidedPort providedPort, RequiredRole requiredRole) {
 		this.providedPort = providedPort;
 		this.requiredRole = requiredRole;
 		this.ports.add(providedPort);
 		this.roles.add(requiredRole);
+		return this;
 	}
 	
-	public void setAttachment(RequiredPort requiredPort, ProvidedRole providedRole) {
+	public AttachmentImpl setAttachment(RequiredPort requiredPort, ProvidedRole providedRole) {
 		this.requiredPort = requiredPort;
 		this.providedRole = providedRole;
 		this.ports.add(requiredPort);
 		this.roles.add(providedRole);
+		return this;
 	}
 
 	public ProvidedPort getProvidedPort() {

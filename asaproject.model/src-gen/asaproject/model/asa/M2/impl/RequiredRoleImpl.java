@@ -2,6 +2,7 @@
  */
 package asaproject.model.asa.M2.impl;
 
+import asaproject.model.asa.M2.Connector;
 import asaproject.model.asa.M2.M2Package;
 import asaproject.model.asa.M2.RequiredRole;
 
@@ -20,9 +21,19 @@ public class RequiredRoleImpl extends RoleImpl implements RequiredRole {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RequiredRoleImpl() {
+	public RequiredRoleImpl() {
 		super();
 	}
+	
+	public RequiredRoleImpl(String name) {
+		super();
+		this.setName(name);
+	}
+	
+	public RequiredRoleImpl connector(Connector connector) {
+    	this.setConnector(connector);
+    	return this;
+    }
 
 	/**
 	 * <!-- begin-user-doc -->

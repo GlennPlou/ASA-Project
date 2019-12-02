@@ -56,12 +56,21 @@ public class BindingImpl extends LinkImpl implements Binding {
 	
 	public BindingImpl(String name) {
 		super();
-		this.name = name;
+		this.setName(name);
 	}
 	
 	public BindingImpl(String name, ProvidedPort providedPort, RequiredPort requiredPort) {
 		super();
-		this.name = name;
+		this.setName(name);
+		this.ports.add(providedPort);
+		this.ports.add(requiredPort);
+	}
+
+	public BindingImpl(String name, RequiredPort requiredPort, ProvidedPort providedPort) {
+		super();
+		this.setName(name);
+		this.ports.add(providedPort);
+		this.ports.add(requiredPort);
 	}
 
 	/**

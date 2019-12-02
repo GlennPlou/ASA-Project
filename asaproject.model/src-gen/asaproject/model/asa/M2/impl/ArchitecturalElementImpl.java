@@ -89,6 +89,11 @@ public abstract class ArchitecturalElementImpl extends MinimalEObjectImpl.Contai
 	protected ArchitecturalElementImpl() {
 		super();
 	}
+	
+	public ArchitecturalElementImpl parent(ArchitecturalElement element) {
+    	this.setParent(element);
+    	return this;
+    }
 
 	/**
 	 * <!-- begin-user-doc -->

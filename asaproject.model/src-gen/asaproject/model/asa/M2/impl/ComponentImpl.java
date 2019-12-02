@@ -68,14 +68,14 @@ public class ComponentImpl extends ArchitecturalElementImpl implements Component
 	
 	public ComponentImpl(String name) {
 		super();
-		this.name = name;
+		this.setName(name);
 	}
 	
-	public ComponentImpl(String name, Configuration configuration) {
-		super();
-		this.name = name;
-		this.configuration = configuration;
-	}
+	public ComponentImpl configuration(Configuration configuration) {
+    	this.setConfiguration(configuration);
+    	return this;
+    }
+	
 
 	/**
 	 * <!-- begin-user-doc -->

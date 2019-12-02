@@ -2,6 +2,8 @@
  */
 package asaproject.model.asa.M2.impl;
 
+import asaproject.model.asa.M2.Component;
+import asaproject.model.asa.M2.Configuration;
 import asaproject.model.asa.M2.M2Package;
 import asaproject.model.asa.M2.ProvidedPort;
 
@@ -26,6 +28,16 @@ public class ProvidedPortImpl extends PortImpl implements ProvidedPort {
 	
 	public ProvidedPortImpl(String name) {
 		super(name);
+	}
+	
+	public ProvidedPortImpl configuration(Configuration configuration) {
+    	this.setConfiguration(configuration);
+    	return this;
+    }
+	
+	public ProvidedPortImpl component(Component component) {
+		this.setComponent(component);
+		return this;
 	}
 
 	/**

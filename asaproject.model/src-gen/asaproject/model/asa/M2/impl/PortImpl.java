@@ -65,7 +65,7 @@ public abstract class PortImpl extends MinimalEObjectImpl.Container implements P
 	
 	protected PortImpl(String name) {
 		super();
-		this.name = name;
+		this.setName(name);
 	}
 
 	/**

@@ -2,11 +2,11 @@
  */
 package asaproject.model.asa.M2.impl;
 
+import asaproject.model.asa.M2.ArchitecturalElement;
 import asaproject.model.asa.M2.Connector;
 import asaproject.model.asa.M2.Glue;
 import asaproject.model.asa.M2.IConnector;
 import asaproject.model.asa.M2.M2Package;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -56,15 +56,40 @@ public class ConnectorImpl extends ArchitecturalElementImpl implements Connector
 	 * @ordered
 	 */
 	protected EList<IConnector> iconnectors;
+	
+	private RequiredRoleImpl caller;
+	private ProvidedRoleImpl called;
+
+    
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ConnectorImpl() {
+	public ConnectorImpl() {
 		super();
 	}
+	
+	public ConnectorImpl(String name) {
+		super();
+		this.setName(name);
+		this.caller = new RequiredRoleImpl("caller").connector(this);
+		this.called = new ProvidedRoleImpl("called").connector(this);
+	}
+	
+	public RequiredRoleImpl getCaller() {
+        return caller;
+    }
+
+    public ProvidedRoleImpl getCalled() {
+        return called;
+    }
+    
+    public ConnectorImpl parent(ArchitecturalElement element) {
+    	super.parent(element);
+    	return this;
+    }
 
 	/**
 	 * <!-- begin-user-doc -->

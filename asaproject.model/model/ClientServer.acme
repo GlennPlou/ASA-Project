@@ -63,7 +63,7 @@ Configuration Client_Server = {
 			}
 			Binding CM_Server = {
 
-				RequiredPort: Connection_Manager.External_Socket_Receive to ProvidedPort: Server_Detail.System_Server_Binding_Send;
+				RequiredPort: Connection_Manager.External_Socket_Receive to ProvidedPort: Server.System_Server_Binding_Send;
 			}
 
 		}
